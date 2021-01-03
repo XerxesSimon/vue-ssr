@@ -1,0 +1,6 @@
+.DS_Store
+
+/js/node_modules
+/vue-demo/node_modules
+/demo/node_modules
+/05/node_modules
