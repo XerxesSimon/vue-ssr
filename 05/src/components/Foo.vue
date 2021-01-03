@@ -1,7 +1,7 @@
 <template>
   <div class="foo">
     <h1 @click="onHandleClick">Foo</h1>
-    <p>omponent {{test}}</p>
+    <p>ompoent {{data}}</p>
   </div>
 </template>
 
@@ -9,35 +9,37 @@
 // import { signup } from '@/api/base'
 import { test } from '../api/base'
 export default {
-  data() {
+  data () {
     return {
-      test: 'ddd'
+      data: 'ddd'
     }
   },
-  mounted() {
+  mounted () {
     // this.init()
-    this.test = '2222'
+    // this.data = '2222'
     // this.test()
-    const res = test()
-    this.test = res.data
-    this.test = '3333'
+    // const res = test()
+    // this.data = res.data
+    // this.data = '3333'
+    this.init()
   },
   methods: {
-    test() {
-      this.test = '3333'
-      alert("33333")
-    },
-    // async init() {
-    //   alert("88888118888")
-    //   this.test = '------'
-    //   const res = await test()
-    //   this.test = res.data
-    //   alert(res.data)
+    // test() {
+    //   this.data = '3333'
+    //   alert("33333")
     // },
-    onHandleClick() {
+    async init () {
+      alert("88888118888")
+      this.data = '------'
+      const res = await test()
+      this.data = res.data
+      alert(this.data)
+      this.data = '-222222222-'
+    },
+    onHandleClick () {
       alert('foo');
     }
-    
+
   },
 }
 </script>
