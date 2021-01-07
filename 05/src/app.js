@@ -2,12 +2,17 @@ import Vue from 'vue';
 import createStore from './store/store.js';
 import createRouter from './router';
 import App from './App.vue';
+// const cors = require('koa2-cors');
 
 import axios from './api/httpRequest';
 
-Vue.prototype.axios = axios;
+Vue.prototype.$axios = axios;
 
-export function createApp() {
+Vue.use(axios)
+// Vue.use(VueWechatTitle);
+// App.use(cors());
+
+export function createApp () {
   const store = createStore();
   const router = createRouter();
 

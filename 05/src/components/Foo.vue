@@ -11,16 +11,10 @@ import { test } from '../api/base'
 export default {
   data () {
     return {
-      data: 'ddd'
+      data: '111'
     }
   },
   mounted () {
-    // this.init()
-    // this.data = '2222'
-    // this.test()
-    // const res = test()
-    // this.data = res.data
-    // this.data = '3333'
     this.init()
   },
   methods: {
@@ -29,12 +23,12 @@ export default {
     //   alert("33333")
     // },
     async init () {
-      alert("88888118888")
-      this.data = '------'
+      // alert("88888118888")
+      this.data = '2222'
       const res = await test()
-      this.data = res.data
-      alert(this.data)
-      this.data = '-222222222-'
+      // this.data = res.data
+      // alert(this.data)
+      // this.data = '333333333'
     },
     onHandleClick () {
       alert('foo');

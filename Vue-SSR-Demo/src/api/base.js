@@ -1,5 +1,8 @@
 import { send } from './send'
 
+/**
+ * 调测接口
+ */
 export function test () {
   return send('/', 'get')
 }
