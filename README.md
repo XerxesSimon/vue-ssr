@@ -40,3 +40,11 @@ axios.get("/movie/top250").then((res) => {
 }).catch((error) => {
   console.warn(error)
 })
+
+
+# server
+
+- python main.py
+
+- npm install
+- node main.js
