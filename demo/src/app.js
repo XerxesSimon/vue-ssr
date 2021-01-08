@@ -8,10 +8,10 @@ import { sync } from 'vuex-router-sync'
 import * as filters from '@/util/filters'
 import titleMixin from './util/title-mixin'
 import 'element-ui/lib/theme-chalk/index.css'
-import './styles/style.stylus'
+import './view/styles/style.stylus'
 
 Object.keys(filters).forEach((key) => {
-    Vue.filter(key,filters[key])
+  Vue.filter(key, filters[key])
 })
 
 Vue.mixin(titleMixin)
@@ -19,16 +19,16 @@ Vue.mixin(titleMixin)
 Vue.use(ElementUI, { size: 'small' })
 
 
-export function createApp() {
+export function createApp () {
 
-    const router = createRouter()
-    const store = createStore()
-    
-    sync(store,router)
-    const app = new Vue({
-        router,
-        store,
-        render: (h) => h(App)
-    })
-    return {app, router, store}
+  const router = createRouter()
+  const store = createStore()
+
+  sync(store, router)
+  const app = new Vue({
+    router,
+    store,
+    render: (h) => h(App)
+  })
+  return { app, router, store }
 }

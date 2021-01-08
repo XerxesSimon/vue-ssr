@@ -4,42 +4,42 @@ import { send } from './send'
  * 调测接口
  */
 export function test () {
-  return send('/', 'get')
+  return send('http://127.0.0.1:5000/test', 'get')
 }
 
 /**
  * 用户登录
  */
 export function signin (data) {
-  return send('/api/signin', 'post', data)
+  return send('/api/signin', 'add', data)
 }
 
 /**
  * 用户退出
  */
 export function signout () {
-  return send('/api/signout', 'post')
+  return send('/api/signout', 'add')
 }
 
 /**
  * 用户注册
  */
 export function signup (data) {
-  return send('/api/signup', 'post', data)
+  return send('/api/signup', 'add', data)
 }
 
 /**
  * 忘记密码
  */
 export function forget (data) {
-  return send('/api/resetpasswd', 'post', data)
+  return send('/api/resetpasswd', 'add', data)
 }
 
 /**
  * 获取验证码
  */
 export function getCaptchacode (data) {
-  return send('/api/captchacode', 'post', data)
+  return send('/api/captchacode', 'add', data)
 }
 
 /**
@@ -60,21 +60,21 @@ export function getManageAnnouncementList (data) {
  * 创建公告
  */
 export function addAnnouncement (data) {
-  return send('/teacher/article/add', 'post', data)
+  return send('/teacher/article/add', 'add', data)
 }
 
 /**
  * 删除公告
  */
 export function delAnnouncement (data) {
-  return send('/teacher/article/' + data, 'deletes')
+  return send('/teacher/article/' + data, 'del')
 }
 
 /**
  * 修改公告
  */
 export function modAnnouncement (data) {
-  return send('/teacher/article/list', 'update', data)
+  return send('/teacher/article/list', 'mod', data)
 }
 
 /**
@@ -88,7 +88,7 @@ export function getAnnouncement (data) {
  * 上传图片
  */
 export function uploadImg (data) {
-  return send('/user/upload/image/upload/0', 'post', data)
+  return send('/user/upload/image/upload/0', 'add', data)
 }
 
 /*

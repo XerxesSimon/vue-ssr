@@ -1,63 +1,59 @@
 import axios from 'axios'
 
 // type multipart/form-data
-export async function post (url, data = '', type = 'application/json') {
-  const res = await axios({
+export function add (url, data = '', type = 'application/json') {
+  return axios({
     url: url,
     method: 'post',
     data: data,
     headers: {
       'Content-Type': type
     }
-  })
-  return res.data
+  }).data
 }
 
-export async function deletes (url, data = '', type = 'application/json') {
-  const res = await axios({
+export function del (url, data = '', type = 'application/json') {
+  return axios({
     url: url,
     method: 'delete',
     data: data,
     headers: {
       'Content-Type': type
     }
-  })
-  return res.data
+  }).data
 }
 
-export async function put (url, data = '', type = 'application/json') {
-  const res = await axios({
+export function mod (url, data = '', type = 'application/json') {
+  return axios({
     url: url,
     method: 'put',
     data: data,
     headers: {
       'Content-Type': type
     }
-  })
-  return res.data
+  }).data
 }
 
-export async function get (url, data = '', type = 'application/json') {
-  const res = await axios({
+export function get (url, data = '', type = 'application/json') {
+  return axios({
     url: url,
     method: 'get',
     params: data,
     headers: {
       'Content-Type': type
     }
-  })
-  return res.data
+  }).data
 }
 
 export function send (url, method, data = '', type = 'application/json') {
-  if (method === 'post') {
-    return post(url, data, type)
+  if (method === 'add') {
+    return add(url, data, type)
   }
-  if (method === 'deletes') {
-    return deletes(url, data, type)
+  if (method === 'del') {
+    return del(url, data, type)
   }
-  if (method === 'put') {
-    return put(url, data, type)
+  if (method === 'mod') {
+    return mod(url, data, type)
   }
   if (method === 'get') {
     return get(url, data, type)
