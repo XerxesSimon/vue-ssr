@@ -9,7 +9,7 @@ export function add (url, data = '', type = 'application/json') {
     headers: {
       'Content-Type': type
     }
-  }).data
+  })
 }
 
 export function del (url, data = '', type = 'application/json') {
@@ -42,7 +42,7 @@ export function get (url, data = '', type = 'application/json') {
     headers: {
       'Content-Type': type
     }
-  }).data
+  })
 }
 
 export function send (url, method, data = '', type = 'application/json') {

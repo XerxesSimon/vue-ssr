@@ -1,10 +1,10 @@
-import { send } from './send'
+import { send, get } from './send'
 
 /**
  * 调测接口
  */
 export function test () {
-  return send('http://127.0.0.1:5000/test', 'get')
+  return get('http://127.0.0.1:5000/test')
 }
 
 /**
