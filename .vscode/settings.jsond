@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.fontSize": 14,
-  "eslint.autoFixOnSave": true,
+  // "eslint.autoFixOnSave": true,
   "fileheader.LastModifiedBy": "xudanfeng",
   "fileheader.Author": "xudanfeng",
   "git.autofetch": true,

@@ -1,3 +1,4 @@
+/* 1
 const express = require("express");
 const app = express();
 
@@ -7,11 +8,11 @@ app.get('*', (request, response) => {
 })
 
 // 监听
-app.listen(5000, () => {
-    console.log('服务已开启:  http://localhost:5000')
+app.listen(3000, () => {
+    console.log('服务已开启:  http://localhost:3000')
 })
+*/
 
-/* 2
 const express = require("express");
 const app = express();
 const Vue = require("vue");
@@ -32,10 +33,9 @@ app.get('*', (request, response) => {
     }).catch(err => console.log(err))
 })
 
-app.listen(3001, () => {
-    console.log('服务已开启')
+app.listen(3000, () => {
+    console.log('服务已开启:  http://localhost:3000')
 })
-*/
 
 /* 3
 const express = require("express");

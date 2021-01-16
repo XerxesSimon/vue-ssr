@@ -4,14 +4,14 @@ import Bar from '../components/Bar.vue';
 
 Vue.use(Router);
 
-function createRouter() {
+function createRouter () {
   const routes = [
     {
       path: '/bar',
       component: Bar
     },
     {
-      path: '/foo',
+      path: '/test',
       component: () => import('../components/Foo.vue')   // 异步路由
     }
   ];

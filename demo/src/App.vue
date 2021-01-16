@@ -5,7 +5,7 @@
 </template>
 
 <style>
-body, #app {
+#app {
   margin: 0; 
 }
 </style>

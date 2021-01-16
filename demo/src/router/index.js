@@ -30,7 +30,7 @@ export default () => {
       // },
       // { path: '/books', component: () => import('@/pages/books/index.vue') },
       // { path: '/about', component: () => import('@/components/about.vue') },
-      { path: '/test', component: () => import('@/views/base/test.vue') },
+      { path: '/test', component: () => import('@/views/test.vue') },
       { path: '*', redirect: '/test' }
     ]
   })

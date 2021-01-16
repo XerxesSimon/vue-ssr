@@ -1,7 +1,9 @@
 import { fetchIndexTags, fetchEntriesByType, fetchRecommendByType } from '@/api/index'
+import { test } from '@/api/base'
 
 const app = {
     state: {
+        test: 'ok',         // test
         activeType: null,   // 当前类型
         indexTags: [],      // 当前页面的属性
         indexList: {        // 当前页面的列表
@@ -25,9 +27,18 @@ const app = {
         },
         SET_INDEX_LIST(state, { type, data }) {
             state.indexList[type] = state.indexList[type].concat(data)
+        },
+        SET_TEST(state, data) {
+            state.test = data
         }
     },
     actions: {
+        FETCH_INDEX_TEST(context) {
+            return test().then(res => {
+                    context.commit('SET_TEST', res.data)
+                    return res.data
+                })
+        },
         FETCH_ACTIVE_TYPE(context, { type }) {
             context.commit('SET_ACTIVE_TYPE', {
                 type

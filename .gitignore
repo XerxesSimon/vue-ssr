@@ -1,8 +1,22 @@
 .DS_Store
 
 /01/node_modules
+/01/postcss.config.js
+
 /02/node_modules
+/02/postcss.config.js
+
 /03/node_modules
+/03/postcss.config.js
+
 /04/node_modules
+/04/postcss.config.js
+
+/05/node_modules
+/05/postcss.config.js
+
 /demo/node_modules
+/demo/postcss.config.js
+
 /server/node_modules
+/server/postcss.config.js
